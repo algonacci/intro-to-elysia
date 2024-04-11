@@ -17,7 +17,7 @@ const app = new Elysia()
   .use(swagger())
   .use(staticPlugin())
   .use(controllers)
-  .listen(3000);
+  .listen(8080);
 
 console.log(
   `🦊 Elysia is running at http://${app.server?.hostname}:${app.server?.port}`
