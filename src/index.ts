@@ -1,6 +1,7 @@
 import { logger } from '@grotto/logysia';
 import { Elysia } from "elysia";
 import { swagger } from '@elysiajs/swagger'
+import { staticPlugin } from '@elysiajs/static'
 import controllers from "./controllers";
 
 
@@ -14,6 +15,7 @@ const app = new Elysia()
     }
   }))
   .use(swagger())
+  .use(staticPlugin())
   .use(controllers)
   .listen(3000);
 
